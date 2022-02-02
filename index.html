@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>crumb</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />	
+  </head>
+  <body>
+	<form id="form" action="main.html" method="GET">
+	  <label>Enter key:</label>
+	  <input type="text" name="key" id="key"/>
+	  <input type="submit" value="Submit" />
+	</form>
+	
+	<script type="text/javascript">
+	  function keySubmit(event) {
+	    var key = document.getElementById('key').innerHTML;
+		localStorage.setItem('key', key);
+	  }
+	  
+	  var key = localStorage.getItem('key');
+	  if (key !== null) {
+		window.location.replace("main.html");
+	  } else {
+	    const form = document.getElementById('form');
+	    form.addEventListener('submit',keySubmit);
+	  }
+	</script>
+  </body>
+</html>

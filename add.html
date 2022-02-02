@@ -1,0 +1,62 @@
+<script type="text/javascript" src="js/add.js"></script>
+<!-- <link rel="stylesheet" type="text/css" media="screen" href="css/add.css" /> -->
+
+<div class="container">
+	<form id="entry_form">
+	  <div class="row">
+	    <div class="col-25">
+		  <label for="type-select">Type</label>
+		</div>
+		<div class="col-75">
+		  <select name="types" id="type-select" name="entry_type">
+		    <option value="Expense">Expense</option>
+		    <option value="Income">Income</option>
+		  </select>
+		</div>
+	  </div>
+	  <div class="row">
+	    <div class="col-25">
+		  <label for="date">Date</label>
+		</div>
+		<div class="col-75">
+		  <input type="date" id="date" name="entry_date">
+		</div>
+      </div>
+	  <div class="row">
+	    <div class="col-25">
+		  <label for="vendor">Vendor</label>
+		</div>
+		<div class="col-75">
+		  <input type="text" id="vendor" name="entry_vendor">
+		</div>
+	  </div>
+	  <div class="row">
+	    <div class="col-25">
+		  <label for="amount">Amount</label>
+		</div>
+		<div class="col-75">
+		  <input type="number" id="amount" name="entry_amount">
+		</div>
+	  </div>
+	  <div class="row">
+	    <div class="col-25">
+		  <label for="category">Category</label>
+		</div>
+		<div class="col-75">
+		  <input type="text" id="category" name="entry_category">
+		</div>
+	  </div>
+	  <div class="row">
+	    <div class="col-25">
+		  <label for="note">Note</label>
+		</div>
+		<div class="col-75">
+		  <textarea type="textarea" id="note" name="entry_note" style="height:100px">
+		  </textarea>
+		</div>
+	  </div>
+	  <div class="row">
+		<button id="submit_button" type="button">Submit</button>
+	  </div>
+	</form>
+</div>
