@@ -70,7 +70,7 @@ function updateSigninStatus(isSignedIn) {
 	  
 	  document.getElementById('user').innerText = googleAuth.currentUser.get().getBasicProfile().getName();
 	  
-	  addEntry.style.display = 'block';
+	  addEntry.style.display = 'flex';
 	  
 	} else {
 	  authorizeButton.style.display = 'block';
@@ -128,6 +128,8 @@ function submitForm() {
 	};
 
 
+	var lastDate = document.getElementById('date').value;
+
 	var valueRangeBody = '{"values": []}';
 
 	var obj = JSON.parse(valueRangeBody);
@@ -136,7 +138,7 @@ function submitForm() {
 
 	for (var value of formData.values()) {
 	  console.log(value);
-	  values.push(value);
+	  values.push(value);	  
 	}
 
 	values.push(document.getElementById('user').innerText);
@@ -155,4 +157,6 @@ function submitForm() {
 	});
 
 	entryForm.reset();
+
+	document.getElementById('date').value = lastDate.toString();
 }

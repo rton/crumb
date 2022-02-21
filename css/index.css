@@ -1,58 +1,36 @@
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 body {
   font-family: sans-serif;
   background-color: #232226;
   margin: auto;
-  width: 50%;
-  padding: 20px 20px 20px 20px;
+  width: 90%;
+  font-size: 90%;
 }
 
 a#banner_title {
   text-decoration: none;
   color: #C182FF;
-  float: left;
-  width: 87%;
 }
 
 #login {
-  float: left;
-  width: 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #user {
   color: white;
 }
 
-#authorize_button {
-  margin-top: 20px;
-}
-
 /* Style the container */
 #add_entry {
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
-  float: left;
-  width: 100%;
-}
-
-/* Style inputs, select elements and textareas */
-input[type=text], input[type=date], input[type=number], select, textarea{
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  /* box-sizing: border-box; */
-  resize: vertical;
-}
-
-/* Style the label to display next to the inputs */
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
+  padding: 20px;  
+  margin-top: 0.5em;
 }
 
 /* Style the submit button */
@@ -65,35 +43,39 @@ button {
   cursor: pointer;
 }
 
-#submit_button {
-  float: right;
+/* Style the label to display next to the inputs */
+.form-label {  
+  order: 1;
+  width: 4em;
+  text-align: right;
+  padding-right: 0.8em;  
 }
 
-/* Floating column for labels: 25% width */
-.col-25 {
-  float: left;
-  width: 20%;
-  margin-top: 6px;
+/* Style inputs, select elements and textareas */
+/* input[type=text], input[type=date], input[type=number], select, textarea{ */
+.form-input {
+  font-family: sans-serif;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;  
+  order: 2;
+  flex: 1 1 auto;
+  font-size: 100%;
 }
 
-/* Floating column for inputs: 75% width */
-.col-75 {
-  float: left;
-  width: 80%;
-  margin-top: 6px;
+.row {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5em;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+#submit_row {  
+  justify-content: flex-end;
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
+@media screen and (max-width: 350px) {
+  .col-25, .col-75, input[type=submit] {    
     margin-top: 0;
   }
 }
